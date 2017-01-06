@@ -3,9 +3,9 @@
 
 deployment:
   dockerhub:
-    branch: master
+    branch: office
     commands:
-      - $DOCKER_HUB_TRIGGER
+      - $dockerhub_trigger
 
 test:
   override:    
