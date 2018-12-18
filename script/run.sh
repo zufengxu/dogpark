@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 function npmbuild()
 {
 	FOLDER=$1
@@ -8,8 +11,8 @@ function npmbuild()
 }
 
 RUN_BUILD=false
-# CODEBUILD_WEBHOOK_TRIGGER=automated
-# PIPELINE_NAME="Component1"
+CODEBUILD_WEBHOOK_TRIGGER=automated
+PIPELINE_NAME="Component1"
 
 echo "Default value for running the build is $RUN_BUILD"
 
@@ -20,10 +23,12 @@ do
 	echo "Changes found in the following files: $COMPONENT"
 done 
 
+throw 
+
 if [ $CODEBUILD_WEBHOOK_TRIGGER ] 
 then
 	echo "Build triggered by webhook, trigger: $CODEBUILD_INITIATOR"
-	for COMPONENT in $COMPONENTSsssssssssssss
+	for COMPONENT in $COMPONENTS
 	do 
 		if [[ $COMPONENT =~ $PIPELINE_NAME ]]
 		then 
