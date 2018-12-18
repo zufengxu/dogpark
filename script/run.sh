@@ -1,10 +1,10 @@
 #!/bin/bash
 function npmbuild()
 {
-  FOLDER=$1
-  # Having shifted twice, the rest is now comments ...
-  COMMENTS=$@
-  echo "Build folder $FOLDER with $COMMENTS"
+	FOLDER=$1
+	# Having shifted twice, the rest is now comments ...
+	COMMENTS=$@
+	echo "Build folder $FOLDER with $COMMENTS"
 }
 
 RUN_BUILD=false
