@@ -23,7 +23,7 @@ done
 if [ $CODEBUILD_WEBHOOK_TRIGGER ] 
 then
 	echo "Build triggered by webhook, trigger: $CODEBUILD_INITIATOR"
-	for COMPONENT in $COMPONENTS
+	for COMPONENT in $COMPONENTSsssssssssssss
 	do 
 		if [[ $COMPONENT =~ $PIPELINE_NAME ]]
 		then 
@@ -40,7 +40,7 @@ fi
 if [ $RUN_BUILD = true ]
 then 
 	echo "<RUN_BUILD> flag was set to $RUN_BUILD, running builds..."
-	npmbuild "DesignSystem.button"
+	npmbuild $PIPELINE_NAME
 else 
 	echo "<RUN_BUILD> flag was set to $RUN_BUILD, not running any builds..."
 fi
