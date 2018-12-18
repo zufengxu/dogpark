@@ -11,8 +11,8 @@ function npmbuild()
 }
 
 RUN_BUILD=false
-CODEBUILD_WEBHOOK_TRIGGER=automated
-PIPELINE_NAME="Component1"
+# CODEBUILD_WEBHOOK_TRIGGER=automated
+# PIPELINE_NAME="Component1"
 
 echo "Default value for running the build is $RUN_BUILD"
 
@@ -22,8 +22,6 @@ for COMPONENT in $COMPONENTS
 do
 	echo "Changes found in the following files: $COMPONENT"
 done 
-
-throw 
 
 if [ $CODEBUILD_WEBHOOK_TRIGGER ] 
 then
