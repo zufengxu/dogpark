@@ -39,10 +39,10 @@ fi
 
 if [ $RUN_BUILD = true ]
 then 
-	echo "<RUN_BUILD> flag was set to true, running builds..."
+	echo "<RUN_BUILD> flag was set to $RUN_BUILD, running builds..."
 	npmbuild "DesignSystem.button"
 else 
-	echo "<RUN_BUILD> flag was set to true, not running any builds..."
+	echo "<RUN_BUILD> flag was set to $RUN_BUILD, not running any builds..."
 fi
 
 
