@@ -22,7 +22,7 @@ done
 
 if [ $CODEBUILD_WEBHOOK_TRIGGER ] 
 then
-	echo "Build triggered by webhook, trigger: $CODEBUILD_WEBHOOK_TRIGGER"
+	echo "Build triggered by webhook, trigger: $CODEBUILD_INITIATOR"
 	for COMPONENT in $COMPONENTS
 	do 
 		if [[ $COMPONENT =~ $PIPELINE_NAME ]]
