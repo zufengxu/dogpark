@@ -23,8 +23,6 @@ do
 	echo "Changes found in the following files: $COMPONENT"
 done 
 
-throw
-
 if [ $CODEBUILD_WEBHOOK_TRIGGER ] 
 then
 	echo "Build triggered by webhook, trigger: $CODEBUILD_INITIATOR"
