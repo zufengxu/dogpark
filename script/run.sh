@@ -47,5 +47,3 @@ then
 else 
 	echo "<RUN_BUILD> flag was set to $RUN_BUILD, not running any builds..."
 fi
-
-
