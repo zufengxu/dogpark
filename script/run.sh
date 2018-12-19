@@ -9,6 +9,8 @@ function npmbuild()
 	COMMENTS=$@
 	echo "Build folder $FOLDER with $COMMENTS"
 	git branch
+	ls 
+	cat Component1/unit1.txt
 }
 
 RUN_BUILD=false
