@@ -1,10 +1,19 @@
 version: 0.2
-# env:
-#   variables:
-#     PIPELINE_NAME: "Component1"
+  # env:
+  #   variables:
+  #     PIPELINE_NAME: "Component1"
 phases:
+  # install:
+  #   commands:
+  #     - command
+  #     - command
+  # pre_build:
+  #   commands:
+  #     - command
+  #     - command
   build:
     commands:
        - printenv
        - chmod +x $CODEBUILD_SRC_DIR/script/run.sh
        - $CODEBUILD_SRC_DIR/script/run.sh
+       - cat $CODEBUILD_SRC_DIR/Component1/Unit1.txt
