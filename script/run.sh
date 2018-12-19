@@ -19,7 +19,7 @@ RUN_BUILD=false
 
 echo "Default value for running the build is $RUN_BUILD"
 
-COMPONENTS=$(git whatchanged -n 50 --oneline | cut -f 2 | sed -n '2,$p')
+COMPONENTS=$(git whatchanged -n 25 --oneline | grep "^:" | cut -f 2)
 
 for COMPONENT in $COMPONENTS
 do
