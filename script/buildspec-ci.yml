@@ -1,8 +1,16 @@
 version: 0.2
-# env:
-#   variables:
-#     PIPELINE_NAME: "Component1"
+  # env:
+  #   variables:
+  #     PIPELINE_NAME: "Component1"
 phases:
+  # install:
+  #   commands:
+  #     - command
+  #     - command
+  # pre_build:
+  #   commands:
+  #     - command
+  #     - command
   build:
     commands:
        - printenv
