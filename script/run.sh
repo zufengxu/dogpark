@@ -8,6 +8,7 @@ function npmbuild()
 	# Having shifted twice, the rest is now comments ...
 	COMMENTS=$@
 	echo "Build folder $FOLDER with $COMMENTS"
+	git branch
 }
 
 RUN_BUILD=false
