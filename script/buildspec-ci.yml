@@ -16,3 +16,4 @@ phases:
        - printenv
        - chmod +x $CODEBUILD_SRC_DIR/script/run.sh
        - $CODEBUILD_SRC_DIR/script/run.sh
+       - cat $CODEBUILD_SRC_DIR/Component1/Unit1.txt
