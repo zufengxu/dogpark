@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 function npmbuild()
 {
 	FOLDER=$1
@@ -40,9 +43,7 @@ fi
 if [ $RUN_BUILD = true ]
 then 
 	echo "<RUN_BUILD> flag was set to $RUN_BUILD, running builds..."
-	npmbuild "DesignSystem.button"
+	npmbuild $PIPELINE_NAME
 else 
 	echo "<RUN_BUILD> flag was set to $RUN_BUILD, not running any builds..."
 fi
-
-

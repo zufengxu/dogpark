@@ -1,0 +1,10 @@
+version: 0.2
+# env:
+#   variables:
+#     PIPELINE_NAME: "Component1"
+phases:
+  build:
+    commands:
+       - printenv
+       - chmod +x $CODEBUILD_SRC_DIR/script/run.sh
+       - $CODEBUILD_SRC_DIR/script/run.sh
