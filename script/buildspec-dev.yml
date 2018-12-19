@@ -17,13 +17,14 @@ phases:
     #commands:
       # - command
       # - command
-  # build:
-  #   commands:
-      # - command
-      # - command
-  #post_build:
-    #commands:
-      # - command
+  build:
+    commands:
+       - printenv
+       - chmod +x $CODEBUILD_SRC_DIR/script/run.sh
+       - $CODEBUILD_SRC_DIR/script/run.sh
+  post_build:
+    commands:
+      - ls
       # - command
 #artifacts:
   #files:
