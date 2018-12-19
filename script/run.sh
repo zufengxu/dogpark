@@ -12,7 +12,7 @@ function npmbuild()
 	echo "Build folder $FOLDER with $COMMENTS"
 	git branch
 	ls 
-	cat Component1/unit1.txt
+	cat ./Component1/unit1.txt
 }
 
 # processing commit to determin if changes occured in the folder for building.
