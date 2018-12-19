@@ -17,8 +17,8 @@ phases:
     #commands:
       # - command
       # - command
-  build:
-    commands:
+  # build:
+  #   commands:
       # - command
       # - command
   #post_build:
