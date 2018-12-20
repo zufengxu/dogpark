@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# set the script to terminate when error occurs
 set -e
 
+# function to build the angular1 and react
 function npmbuild()
 {
 	FOLDER=$1
@@ -9,17 +11,18 @@ function npmbuild()
 	COMMENTS=$@
 	echo "Build folder $FOLDER with $COMMENTS"
 	git branch
-	ls 
-	cat Component1/unit1.txt
+	ls Component1
+	cat Component1/Unit1.txt
 }
 
+# processing commit to determin if changes occured in the folder for building.
 RUN_BUILD=false
-# CODEBUILD_WEBHOOK_TRIGGER=automated
-# PIPELINE_NAME="Component1"
+CODEBUILD_WEBHOOK_TRIGGER=automated
+PIPELINE_NAME="Component1"
 
 echo "Default value for running the build is $RUN_BUILD"
 
-COMPONENTS=$(git whatchanged -n 1 --oneline | cut -f 2 | sed -n '2,$p')
+COMPONENTS=$(git whatchanged -n 25 --oneline | grep "^:" | cut -f 2)
 
 for COMPONENT in $COMPONENTS
 do
